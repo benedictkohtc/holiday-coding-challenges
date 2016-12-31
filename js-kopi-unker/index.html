@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grouchy Kopi Uncle</title>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        function orderNao() {
+            var orderAsk = prompt("so.. what kopi you want to make??");
+
+            var result = kopiRecipe(orderAsk);
+            var order = result[0];
+            var recipe = result[1];
+
+            if (order === "invalid") {
+                document.getElementById("resultTarget").innerHTML = "" + recipe;
+            } else {
+                document.getElementById("resultTarget").innerHTML = "" + order + "" + recipe + result[2];
+            }
+        }
+    </script>
+    <style>
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://i.imgur.com/bOxF6RJ.png" style="float:right;">
+    <h2> So.. you wan learn how to make kopi?! You come right place, un-ker tchich you! But un-ker wong you first, un-ker only make traditional kopi. You see see the picture ... not there means un-ker dunno!!</h2>
+    <p></p>
+
+    <div id="resultTarget"></div>
+    <p></p>
+    <button onclick="orderNao()">orhh.. okay Uncle</button>
+
+</body>
+
+</html>
